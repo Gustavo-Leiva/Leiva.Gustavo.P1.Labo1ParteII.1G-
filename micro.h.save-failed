@@ -1,0 +1,27 @@
+
+#include "empresa.h"
+#include "tipo.h"
+
+
+#ifndef MICRO_H_INCLUDED
+#define MICRO_H_INCLUDED
+
+typedef struct
+{
+
+    int id;
+    int idEmpresa;
+    int idTipo;
+    int capacidad;
+    int isEmpty;
+
+
+
+} eMicro;
+
+#endif // MICRO_H_INCLUDED
+
+int inicializarMicros(eMicro vec[], int tam);
+int harcodearMicros(eMicro vec[], int tam, int cantM, int* pNextId);
+int buscarLibreMicros(eMicro vec[], int tam, int* pIndex);
+int altaMicro(eMicro vec[], int tam, eEmpresa empresas[], int tamE, eTipo tipos[], int tamT, int* pNextId);
